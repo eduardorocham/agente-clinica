@@ -1,0 +1,28 @@
+[project]
+name = "agente-clinica"
+version = "0.1.0"
+description = "Demo de agente de atendimento para clínica médica (LangGraph + Gemini + Google Calendar)"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.141.1",
+    "uvicorn>=0.53.0",
+    "langchain-core>=1.6.3",
+    "langchain-google-genai>=2.0.0",
+    "langgraph>=1.2.11",
+    "pydantic-settings>=2.6.0",
+    "python-dotenv>=1.2.3",
+    "google-api-python-client>=2.150.0",
+    "google-auth>=2.35.0",
+    "google-auth-oauthlib>=1.2.1",
+    "httpx>=0.28.1",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
